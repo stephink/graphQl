@@ -32,3 +32,39 @@ The first api started to appear in 2000 . it was created by Big companies like s
 
 GraphQl and rest are two Api design approaches that fulfill the same functions: data transmission via internet protocols such as HTTP, However,how they do so varies significantly.Graphql is a query language,where as rest is an architecture
 
+**Tri to pull master branch** 
+
+To add data using graphQl Ui 
+
+try:
+
+mutation{
+  createUser(input:{
+    	name:"qwerty"
+    	department:{
+     	 	deptId:2
+      	name:Accounts
+      }
+  }){
+    id
+    department{
+      deptId
+    }
+  }
+}
+
+to view data
+
+try:
+
+query{
+  getUser(id:"24d11c08-2ef2-41f8-8b06-188078a8e245"){
+    id
+    name
+    department {
+      deptId
+      name
+    }
+  }
+  
+}
